@@ -5,11 +5,12 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
   <url>
     <loc>https://copperdating.com/</loc>
   </url>
   <url>
-    <loc>https://copperdating.com/en</loc>
+    <loc>https://copperdating.com/index-en</loc>
   </url>
   <url>
     <loc>https://copperdating.com/cont%C3%A1ctenos</loc>
@@ -19,6 +20,11 @@
   </url>
   <url>
     <loc>https://copperdating.com/privacy</loc>
+  </url>
+
+
+  <url>
+    <loc>https://copperdating.com/blog/</loc>
   </url>
   <url>
     <loc>https://copperdating.com/blog/consejos-e-ideas-para-las-citas-en-video</loc>

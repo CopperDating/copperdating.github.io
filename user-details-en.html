@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es" style="min-height: 100%">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/static/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.typekit.net/vty0ujg.css">
+
+    <title>Enter your details for the video speed dating event</title>
+
+    <style>
+        @media (min-width: 1600px){
+            .padding-top-copper{
+                padding-top:5%
+            }
+        }
+        @media (max-width: 1600px){
+             .padding-top-copper{
+                padding-top:2%
+            }
+        }
+        .genderButton {
+            background-color: #17a2b8;
+        }
+        .genderButton.selected {
+            background-color:#24c6e0;
+        }
+    </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27831933-11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-27831933-11');
+</script>
+
+</head>
+<body style="background-color:#CEE8DD">
+    <div class="container">
+        <div class="row padding-top-copper">
+            <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+                <div>
+                    <h3>Copper Dating</h3>
+                </div>
+
+                <form id="frmRegister" method="POST"
+                    style="color:#212529;font-size:20px;font-weight:500;" class="pt-4 mb-5">
+                    <div class="form-group">
+                        <label for="inputName">First name</label>
+                        <input type="text" name="name" placeholder="(This is shown to your dates)" class="form-control" id="inputName" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your gender</label><br/>
+
+                        <input type="radio" id="male" name="gender" style="width:25px" class="genderButton" value="m" required>
+                        <label for="male">Man</label>
+                        <br>
+                        <input type="radio" id="female" name="gender" style="width:25px" class="genderButton" value="f" required>
+                        <label for="female">Woman</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAge">Your age</label>
+                        <br/>
+                        <input class="form-control" id="inputAge" max="150"
+                            min="18" required name="age" style="width: 45%"
+                            type="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputContact" class="mb-0">Number or Instagram</label>
+                        <input type="text" placeholder="(This is given to matches)" class="form-control" id="inputContact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="mb-0">Email Address</label>
+                        <input type="email" placeholder="(How we contact you and your matches)" class="form-control" id="inputEmail" required name="email">
+                    </div>
+                    <button type="submit" id="registerSubmit" style="color:white" class="btn btn-primary mt-4 btn-block">Start your dates</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/signup.js"></script>
+
+    </body>
+</html>
