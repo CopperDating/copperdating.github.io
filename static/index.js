@@ -1,7 +1,7 @@
 var start_button_div = document.getElementById("start_button_div");
 start_button_div.style.display = "none";
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 11, 2020 20:00:00 GMT+02:00").getTime();
+var countDownDate = new Date("Oct 18, 2020 20:00:00 GMT+02:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
