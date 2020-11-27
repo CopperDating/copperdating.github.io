@@ -21,11 +21,14 @@ var x = setInterval(function() {
   // Display the result in the element with id="event_start_countdown"
   document.getElementById("event_start_countdown").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-console.log(minutes);
+
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     before_event.style.display = "none";
     start_button_div.style.display = "block";
+  }
+  if(minutes < 30){
+    reg_event.style.display = "none";
   }
 }, 1000);
