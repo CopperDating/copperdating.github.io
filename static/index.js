@@ -28,7 +28,7 @@ var x = setInterval(function() {
     before_event.style.display = "none";
     start_button_div.style.display = "block";
   }
-  if(minutes < 30){
+  if(minutes < 30 && hours == 0 && days == 0){
     reg_event.style.display = "none";
   }
 }, 1000);
