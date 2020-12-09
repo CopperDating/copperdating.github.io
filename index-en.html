@@ -765,7 +765,7 @@
         });
 
 
-        var countDownDate = new Date("Dec 8, 2020 20:00:00 GMT+01:00").getTime();
+        var countDownDate = new Date("Dec 10, 2020 20:00:00 GMT+01:00").getTime();
         var x = setInterval(function () {
             var now = new Date().getTime();
             var distance = countDownDate - now;
@@ -773,8 +773,8 @@
             // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                $("before_event").addClass("d-none");
-                $("start_button").removeClass("d-none");
+                $(".before_event").addClass("d-none");
+                $(".start_button").removeClass("d-none");
             }
         }, 5000);
     </script>

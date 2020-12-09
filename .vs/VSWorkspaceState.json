@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\static"
+    "\\assets",
+    "\\assets\\js"
   ],
-  "SelectedNode": "\\sitemap.xml",
+  "SelectedNode": "\\assets\\js\\hs.countdown.js",
   "PreviewInSolutionExplorer": false
 }
