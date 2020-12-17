@@ -10,9 +10,6 @@
     <loc>https://copperdating.com/</loc>
   </url>
   <url>
-    <loc>https://copperdating.com/index-en</loc>
-  </url>
-  <url>
     <loc>https://copperdating.com/contacto</loc>
   </url>
   <url>
@@ -27,7 +24,16 @@
   <url>
     <loc>https://copperdating.com/privacy</loc>
   </url>
-
+  <url>
+    <loc>https://copperdating.com/en/</loc>
+  </url>
+  <url>
+    <loc>https://copperdating.com/en/faq</loc>
+  </url>
+  <url>
+    <loc>https://copperdating.com/en/events</loc>
+  </url>
+  
 
   <url>
     <loc>https://copperdating.com/blog/</loc>
