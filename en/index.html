@@ -162,11 +162,11 @@
                         <!-- Begin Mailchimp Signup Form -->
                         <link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
                         <style type="text/css">
-                                #mc_embed_signup {
-                                    clear: left;
-                                    width: 100%;
-                                }
-                                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                            #mc_embed_signup {
+                                clear: left;
+                                width: 100%;
+                            }
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                         </style>
                         <div id="mc_embed_signup">
@@ -182,6 +182,7 @@
                             </form>
                         </div>
                         <!--End mc_embed_signup-->
+                        <!--<p style="color:#cb317d"><b>When the event starts, a button will appear here to join the event</b></p>-->
                     </div>
                     <div class="start_button d-none">                       
                         <a class="btn btn-primary transition-3d-hover btn-block" href="https://app.copperdating.com">Start Dating</a>
@@ -474,7 +475,33 @@
         <div class="container space-1 space-sm-2">
             <div class="row justify-content-lg-between align-items-lg-center">
                 <div class="col-md-7 col-sm-12">
-                    <img class="img-fluid rounded" src="/img/how-copper-dating-works.jpg" alt="Image Description">
+                    <!-- Video Block -->
+                    <div id="youTubeVideoPlayerExample1" class="video-player bg-dark rounded">
+                        <img class="img-fluid video-player-preview rounded" src="../img/how-copper-works.jpg" alt="Image">
+
+                        <!-- Play Button -->
+                        <a class="js-inline-video-player video-player-btn video-player-centered" href="javascript:;"
+                           data-hs-video-player-options='{
+                           "videoId": "kH987KoEwJs",
+                           "parentSelector": "#youTubeVideoPlayerExample1",
+                           "targetSelector": "#youTubeVideoIframeExample1",
+                           "isAutoplay": true,
+                           "classMap": {
+                             "toggle": "video-player-played"
+                           }
+                         }'>
+                            <span class="video-player-icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </a>
+                        <!-- End Play Button -->
+                        <!-- Video Iframe -->
+                        <div class="embed-responsive embed-responsive-16by9 rounded">
+                            <div id="youTubeVideoIframeExample1"></div>
+                        </div>
+                        <!-- End Video Iframe -->
+                    </div>
+                    <!-- End Video Block -->
 
                 </div>
 
