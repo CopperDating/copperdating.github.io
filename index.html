@@ -154,7 +154,7 @@
                         <!-- Countdown -->
                         <div class="js-countdown row mb-3"
                              data-hs-countdown-options='{
-                           "endDate": "Mar 21, 2021 20:00:00 GMT+01:00"
+                           "endDate": "Apr 04, 2021 20:00:00 GMT+01:00"
                          }'>
                             <div class="col-3">
                                 <span class="js-cd-days font-size-3 text-info font-weight-bold mb-0"></span>
@@ -174,8 +174,30 @@
                             </div>
                         </div>
                         <!-- End Countdown -->
-
-                        <p style="color:#cb317d"><b>Cuando comience el evento, aparecerá un botón aquí para unirse al evento</b></p>
+                        <!-- Begin Mailchimp Signup Form -->
+                        <link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup {
+                                clear: left;
+                                width: 100%;
+                            }
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                            <form action="https://hotmail.us18.list-manage.com/subscribe/post?u=4f0ba092dd5323cbb9c172f1f&amp;id=e4fc338fa9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll" class="col-12 px-0 text-left">
+                                    <input type="email" value="" name="EMAIL" class="email input_field_width col-sm-8 col-12" id="mce-EMAIL" placeholder="Tu email" required style="height: 43px;font-size:17px;font-weight:600;">
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4f0ba092dd5323cbb9c172f1f_e4fc338fa9" tabindex="-1" value=""></div>
+                                    <div class="clear col-sm-3 col-12 px-0">
+                                        <input type="submit" value="Regístrate" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info btn-sm">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                        <!--<p style="color:#cb317d"><b>Cuando comience el evento, aparecerá un botón aquí para unirse al evento</b></p>-->
                     </div>
                     <div class="start_button d-none">
                         <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/instructions">Comienza tus citas</a>
@@ -760,7 +782,7 @@
             });
         });
 
-        var countDownDate = new Date("Mar 21, 2021 20:00:00 GMT+01:00").getTime();
+        var countDownDate = new Date("Apr 04, 2021 20:00:00 GMT+01:00").getTime();
         var x = setInterval(function () {
             var now = new Date().getTime();
             var distance = countDownDate - now;
