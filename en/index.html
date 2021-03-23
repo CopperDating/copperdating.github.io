@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Copper Dating - Online Video Speed Dating, Free Events</title>
-    <meta name="description" content="Online video speed dating for all ages, where you'll meet single people near you in London. Sign up to our Saturday events for free. Build real connections with real people, without swiping.">
+    <title>Copper Dating - Online Video Speed Dating, London Events</title>
+    <meta name="description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Saturday events. Build real connections with real people, without swiping.">
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
@@ -38,13 +38,13 @@
         }
     </script>
 
-    <meta property="og:title" content="Copper Dating - Online Video Speed Dating, Free Events">
+    <meta property="og:title" content="Copper Dating - Online Video Speed Dating, London Events">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://copperdating.com/en/">
     <meta property="og:image" content="https://copperdating.com/img/copper-hero-main.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Saturday events for free. Build real connections with real people, without swiping.">
+    <meta property="og:description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Saturday events. Build real connections with real people, without swiping.">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183645745-2"></script>
@@ -55,7 +55,7 @@
 
         gtag('config', 'UA-183645745-2');
     </script>
-
+    <script src="https://js.stripe.com/v3"></script>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -142,9 +142,9 @@
             <div class="row justify-content-lg-between align-items-md-center">
                 <div class="col-md-6 col-lg-5 mb-7 mb-md-0">
                     <div class="mb-3">
-                        <h1 class="display-4 mb-3">Free video speed dating</h1>
+                        <h1 class="display-5 mb-3">Video speed dating</h1>
                         <p class="lead">3 minute video dates with people near you. Every other Saturday, here at 8pm.</p>
-                        <p class="lead">The next event starts in:</p>
+                        <p class="lead">Each event costs £5. The next event starts in:</p>
                     </div>
                     <div class="before_event">
                         <!-- Countdown -->
@@ -170,34 +170,20 @@
                             </div>
                         </div>
                         <!-- End Countdown -->
-                        <!-- Begin Mailchimp Signup Form -->
-                        <link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-                        <style type="text/css">
-                            #mc_embed_signup {
-                                clear: left;
-                                width: 100%;
-                            }
-                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                        </style>
-                        <div id="mc_embed_signup">
-                            <form action="https://copperdating.us7.list-manage.com/subscribe/post?u=88ed462df240e73682a5d2c87&amp;id=cf3abd50fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll" class="col-12 px-0 text-left">
-                                    <input type="email" value="" name="EMAIL" class="email input_field_width col-sm-8 col-12" id="mce-EMAIL" placeholder="Your email" required style="height: 43px;font-size:17px;font-weight:600;">
-                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4f0ba092dd5323cbb9c172f1f_e4fc338fa9" tabindex="-1" value=""></div>
-                                    <div class="clear col-sm-3 col-12 px-0">
-                                        <input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info btn-sm">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!--End mc_embed_signup-->
                         <!--<p style="color:#cb317d"><b>When the countdown ends, a button will appear here to join the event!</b></p>-->
                     </div>
-                    <div class="start_button d-none">                       
-                        <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/en/instructions">Start Event</a>
-                    </div>
+                    <!--<div class="start_button">
+        <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/en/instructions">Sign up to event</a>
+    </div>-->
+                    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                    <button class="btn-block" style="background-color:#6772E5;color:#FFF;padding:12px 12px;border:0;border-radius:4px;font-size:1em"
+                            id="checkout-button-price_1IWlD2AL9LbUbSNf7c3sHrs7"
+                            role="link"
+                            type="button">
+                        <b>Sign up to this event</b>
+                    </button>
+
+                    <div id="error-message"></div>
                 </div>
 
                 <div class="col-md-6">
@@ -369,7 +355,7 @@
                     <div class="mb-5 mb-md-7">
                         <h2 class="mb-3">Start something genuine</h2>
                         <p>Copper is helping to connect people in London with it's video first dating platform. We listen closely to our users and keep improving the online experience each event, with new features and design improvements. Some of our success includes:</p>
-                        
+
                     </div>
                     <!-- End Title -->
 
@@ -803,6 +789,43 @@
                 var videoPlayer = new HSVideoPlayer($(this)).init();
             });
         });
+    </script>
+
+    <script>
+        (function () {
+            var stripe = Stripe('pk_live_51IWl2YAL9LbUbSNf3ouovYBDY2pEtovUbjo0Z6qM73tbudsl9RInGc0YYNISJsfRYwJkNqagagfsXcANt1n5s1dg00kRfC8FkB');
+
+            var checkoutButton = document.getElementById('checkout-button-price_1IWlD2AL9LbUbSNf7c3sHrs7');
+            checkoutButton.addEventListener('click', function () {
+                /*
+                 * When the customer clicks on the button, redirect
+                 * them to Checkout.
+                 */
+                stripe.redirectToCheckout({
+                    lineItems: [{ price: 'price_1IWlD2AL9LbUbSNf7c3sHrs7', quantity: 1 }],
+                    mode: 'payment',
+                    /*
+                     * Do not rely on the redirect to the successUrl for fulfilling
+                     * purchases, customers may not always reach the success_url after
+                     * a successful payment.
+                     * Instead use one of the strategies described in
+                     * https://stripe.com/docs/payments/checkout/fulfill-orders
+                     */
+                    successUrl: 'https://copperdating.com/thank-you',
+                    cancelUrl: 'https://copperdating.com/',
+                })
+                    .then(function (result) {
+                        if (result.error) {
+                            /*
+                             * If `redirectToCheckout` fails due to a browser or network
+                             * error, display the localized error message to your customer.
+                             */
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                        }
+                    });
+            });
+        })();
     </script>
 
 
