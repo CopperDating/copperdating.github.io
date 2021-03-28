@@ -8,19 +8,7 @@
 
   <url>
     <loc>https://copperdating.com/</loc>
-  </url>
-  <url>
-    <loc>https://copperdating.com/es/contacto</loc>
-  </url>
-  <url>
-    <loc>https://copperdating.com/es/eventos</loc>
-  </url>
-  <url>
-    <loc>https://copperdating.com/es/faq</loc>
-  </url>
-  <url>
-    <loc>https://copperdating.com/es/</loc>
-  </url>
+  </url> 
   <url>
     <loc>https://copperdating.com/terms</loc>
   </url>
@@ -39,8 +27,24 @@
   <url>
     <loc>https://copperdating.com/speed-dating-guide</loc>
   </url>
+
+
+
+  <url>
+    <loc>https://copperdating.com/es/contacto</loc>
+  </url>
+  <url>
+    <loc>https://copperdating.com/es/eventos</loc>
+  </url>
+  <url>
+    <loc>https://copperdating.com/es/faq</loc>
+  </url>
+  <url>
+    <loc>https://copperdating.com/es/</loc>
+  </url>
   
 
+  
   <url>
     <loc>https://copperdating.com/es/blog/</loc>
   </url>
