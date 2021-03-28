@@ -3,7 +3,7 @@
 <head>
     <!-- Title -->
     <title>Copper Dating - Online Video Speed Dating, London Events</title>
-    <meta name="description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Saturday events. Build real connections with real people, without swiping.">
+    <meta name="description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Sunday events. Build real connections with real people, without swiping.">
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
@@ -44,7 +44,7 @@
     <meta property="og:image" content="https://copperdating.com/img/copper-hero-main.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Saturday events. Build real connections with real people, without swiping.">
+    <meta property="og:description" content="Online video speed dating, where you'll meet single people near you in London. Sign up to our Sunday events. Build real connections with real people, without swiping.">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183645745-2"></script>
@@ -143,14 +143,14 @@
                 <div class="col-md-6 col-lg-5 mb-7 mb-md-0">
                     <div class="mb-3">
                         <h1 class="display-5 mb-3">Video speed dating</h1>
-                        <p class="lead">3 minute video dates with people near you. Every other Saturday, here at 8pm.</p>
-                        <p class="lead">The event has started:</p>
+                        <p class="lead">3 minute video dates with people near you. Every other Sunday, here at 8pm.</p>
+                        <p class="lead">Each event costs £5. The next event starts in:</p>
                     </div>
                     <div class="before_event">
                         <!-- Countdown -->
                         <div class="js-countdown row mb-5"
                              data-hs-countdown-options='{
-                           "endDate": "Apr 10, 2021 20:00:00 GMT+00:00"
+                           "endDate": "Apr 11, 2021 20:00:00 GMT+00:00"
                          }'>
                             <div class="col-3">
                                 <span class="js-cd-days font-size-3 text-info font-weight-bold mb-0"></span>
@@ -173,10 +173,17 @@
                         <!--<p style="color:#cb317d"><b>When the countdown ends, a button will appear here to join the event!</b></p>-->
                     </div>
                     <!--<div class="start_button">
-        <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/en/instructions">Sign up to event</a>
-    </div>-->
+                        <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/en/instructions">Sign up to event</a>
+                    </div>-->
                     <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                    <!--<a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/748943">Start the event</a>-->
+                    <!--<a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/thank-you">Start the event</a>-->
+
+                    <button class="btn-block" style="background-color:#6772E5;color:#FFF;padding:12px 12px;border:0;border-radius:4px;font-size:1em"
+                            id="checkout-button-price_1IWlD2AL9LbUbSNf7c3sHrs7"
+                            role="link"
+                            type="button">
+                        <b>Sign up to this event</b>
+                    </button>
 
                     <div id="error-message"></div>
                 </div>
@@ -752,7 +759,7 @@
                         });
 
 
-                        var countDownDate = new Date("Apr 10, 2021 20:00:00 GMT+00:00").getTime();
+                        var countDownDate = new Date("Apr 11, 2021 20:00:00 GMT+00:00").getTime();
                         var x = setInterval(function () {
                             var now = new Date().getTime();
                             var distance = countDownDate - now;
@@ -806,7 +813,7 @@
                                      * Instead use one of the strategies described in
                                      * https://stripe.com/docs/payments/checkout/fulfill-orders
                                      */
-                                    successUrl: 'https://copperdating.com/748943',
+                                    successUrl: 'https://copperdating.com/thank-you',
                                     cancelUrl: 'https://copperdating.com/',
                                 })
                                     .then(function (result) {
