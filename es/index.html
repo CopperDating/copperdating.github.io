@@ -151,50 +151,18 @@
                         <p class="lead">Video citas de 3 minutos con personas cercanas. Los domingos, cada dos semanas a las 20hrs.</p>
                         <!-- <p class="lead">Próximo evento comienza en:</p>-->
                     </div>
-                    <div class="before_event">
-                        <!-- Countdown -->
-                        <div class="js-countdown row mb-3"
-                             data-hs-countdown-options='{
-                           "endDate": "Apr 04, 2021 20:00:00 GMT+02:00"
-                         }'>
-                            <div class="col-3">
-                                <span class="js-cd-days font-size-3 text-info font-weight-bold mb-0"></span>
-                                <span class="h5 d-block mb-0">Dias</span>
-                            </div>
-                            <div class="col-3">
-                                <span class="js-cd-hours font-size-3 text-info font-weight-bold mb-0"></span>
-                                <span class="h5 d-block mb-0">Horas</span>
-                            </div>
-                            <div class="col-3">
-                                <span class="js-cd-minutes font-size-3 text-info font-weight-bold mb-0"></span>
-                                <span class="h5 d-block mb-0">Minutos</span>
-                            </div>
-                            <div class="col-3">
-                                <span class="js-cd-seconds font-size-3 text-info font-weight-bold mb-0"></span>
-                                <span class="h5 d-block mb-0">Segundos</span>
-                            </div>
-                        </div>
-                        <!-- End Countdown -->
-                        <hr />
-                        <h4>Coste: 5€ - Duración: 1 hora</h4>
-                        <hr />
+                    <div>
+
+
 
 
                         <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                         <!--<a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/thank-you">Start the event</a>-->
 
-                        <button class="btn-block" style="background-color:#6772E5;color:#FFF;padding:12px 12px;border:0;border-radius:4px;font-size:1em"
-                                id="checkout-button-price_1Ia2ycAL9LbUbSNfNbqTDj2h"
-                                role="link"
-                                type="button">
-                            <b>Inscríbete a este evento</b>
-                        </button>
-                        <!--End mc_embed_signup-->
-                        <!--<p style="color:#cb317d"><b>Cuando comience el evento, aparecerá un botón aquí para unirse al evento</b></p>-->
+
+                        <p style="color:#cb317d"><b>Próximo evento próximamente.</b></p>
                     </div>
-                    <div class="start_button d-none">
-                        <a class="btn btn-primary transition-3d-hover btn-block" href="https://copperdating.com/instructions">Comienza tus citas</a>
-                    </div>
+
                 </div>
 
                 <div class="col-md-6">
@@ -762,32 +730,7 @@
     <script src="/assets/js/hs.countdown.js"></script>
 
     <!-- JS Plugins Init. -->
-    <script>
-        $(document).on('ready', function () {
-            // initialization of form validation
-            $('.js-validate').each(function () {
-                var validation = $.HSCore.components.HSValidation.init($(this));
-            });
 
-            // initialization of countdowns
-            $('.js-countdown').each(function () {
-                var countdown = $.HSCore.components.HSCountdown.init($(this));
-            });
-        });
-
-        var countDownDate = new Date("Apr 04, 2021 20:00:00 GMT+02:00").getTime();
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                $(".before_event").addClass("d-none");
-                $(".start_button").removeClass("d-none");
-            }
-        }, 1000);
-    </script>
 
 
 
@@ -809,44 +752,6 @@
         });
     </script>
 
-
-
-    <script>
-        (function () {
-            var stripe = Stripe('pk_live_51IWl2YAL9LbUbSNf3ouovYBDY2pEtovUbjo0Z6qM73tbudsl9RInGc0YYNISJsfRYwJkNqagagfsXcANt1n5s1dg00kRfC8FkB');
-
-            var checkoutButton = document.getElementById('checkout-button-price_1Ia2ycAL9LbUbSNfNbqTDj2h');
-            checkoutButton.addEventListener('click', function () {
-                /*
-                 * When the customer clicks on the button, redirect
-                 * them to Checkout.
-                 */
-                stripe.redirectToCheckout({
-                    lineItems: [{ price: 'price_1Ia2ycAL9LbUbSNfNbqTDj2h', quantity: 1 }],
-                    mode: 'payment',
-                    /*
-                     * Do not rely on the redirect to the successUrl for fulfilling
-                     * purchases, customers may not always reach the success_url after
-                     * a successful payment.
-                     * Instead use one of the strategies described in
-                     * https://stripe.com/docs/payments/checkout/fulfill-orders
-                     */
-                    successUrl: 'https://copperdating.com/es/thank-you',
-                    cancelUrl: 'https://copperdating.com/es/',
-                })
-                    .then(function (result) {
-                        if (result.error) {
-                            /*
-                             * If `redirectToCheckout` fails due to a browser or network
-                             * error, display the localized error message to your customer.
-                             */
-                            var displayError = document.getElementById('error-message');
-                            displayError.textContent = result.error.message;
-                        }
-                    });
-            });
-        })();
-    </script>
 
 
 </body>
