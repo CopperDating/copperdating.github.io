@@ -149,10 +149,26 @@
                     <div class="row" style="font-weight:600">
                         <div class="col-md-12 pt-2">
                             <p>📍 Location: London, 🗓 Date: Sunday 11th July</p>
-                            <p>💸 Cost: £5, ⌛ Duration: 1 hour, 👵 Age: 50+</p>
+                            <p>💸 Cost: £8, ⌛ Duration: 1 hour, 👵 Age: 50+</p>
 
                             <button class="btn-block mb-4" style="background-color:#6772E5;color:#FFF;padding:12px 12px;border:0;border-radius:4px;font-size:1em"
                                     id="checkout-button-price_1IWlD2AL9LbUbSNf7c3sHrs7"
+                                    role="link"
+                                    type="button">
+                                <b>Sign up to this event</b>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <hr />
+                    </div>
+                    <div class="row" style="font-weight:600;">
+                        <div class="col-md-12 py-2">
+                            <p>📍 Location: London, 🗓 Date: Sunday 18th July</p>
+                            <p>💸 Cost: £5, ⌛ Duration: 1 hour, 👵 Age: 21+</p>
+
+                            <button class="btn-block mb-4" style="background-color:#6772E5;color:#FFF;padding:12px 12px;border:0;border-radius:4px;font-size:1em"
+                                    id="checkout-button-price_1J9ptYAL9LbUbSNftO86vTiQ"
                                     role="link"
                                     type="button">
                                 <b>Sign up to this event</b>
@@ -779,7 +795,42 @@
             });
         })();
     </script>
+    <script>
+        (function () {
+            var stripe = Stripe('pk_live_51IWl2YAL9LbUbSNf3ouovYBDY2pEtovUbjo0Z6qM73tbudsl9RInGc0YYNISJsfRYwJkNqagagfsXcANt1n5s1dg00kRfC8FkB');
 
+            var checkoutButton = document.getElementById('checkout-button-price_1J9ptYAL9LbUbSNftO86vTiQ');
+            checkoutButton.addEventListener('click', function () {
+                /*
+                 * When the customer clicks on the button, redirect
+                 * them to Checkout.
+                 */
+                stripe.redirectToCheckout({
+                    lineItems: [{ price: 'price_1J9ptYAL9LbUbSNftO86vTiQ', quantity: 1 }],
+                    mode: 'payment',
+                    /*
+                     * Do not rely on the redirect to the successUrl for fulfilling
+                     * purchases, customers may not always reach the success_url after
+                     * a successful payment.
+                     * Instead use one of the strategies described in
+                     * https://stripe.com/docs/payments/checkout/fulfill-orders
+                     */
+                    successUrl: 'https://copperdating.com/11843',
+                    cancelUrl: 'https://copperdating.com/',
+                })
+                    .then(function (result) {
+                        if (result.error) {
+                            /*
+                             * If `redirectToCheckout` fails due to a browser or network
+                             * error, display the localized error message to your customer.
+                             */
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                        }
+                    });
+            });
+        })();
+    </script>
 
 
 
