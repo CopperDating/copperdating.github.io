@@ -769,42 +769,6 @@
                      * Instead use one of the strategies described in
                      * https://stripe.com/docs/payments/checkout/fulfill-orders
                      */
-                    successUrl: 'https://app.joinglimpse.com/join?key=23204FD',
-                    cancelUrl: 'https://copperdating.com/',
-                })
-                    .then(function (result) {
-                        if (result.error) {
-                            /*
-                             * If `redirectToCheckout` fails due to a browser or network
-                             * error, display the localized error message to your customer.
-                             */
-                            var displayError = document.getElementById('error-message');
-                            displayError.textContent = result.error.message;
-                        }
-                    });
-            });
-        })();
-    </script>
-    <script>
-        (function () {
-            var stripe = Stripe('pk_live_51IWl2YAL9LbUbSNf3ouovYBDY2pEtovUbjo0Z6qM73tbudsl9RInGc0YYNISJsfRYwJkNqagagfsXcANt1n5s1dg00kRfC8FkB');
-
-            var checkoutButton = document.getElementById('checkout-button-price_1JJKPwAL9LbUbSNf1m9diInZ');
-            checkoutButton.addEventListener('click', function () {
-                /*
-                 * When the customer clicks on the button, redirect
-                 * them to Checkout.
-                 */
-                stripe.redirectToCheckout({
-                    lineItems: [{ price: 'price_1JJKPwAL9LbUbSNf1m9diInZ', quantity: 1 }],
-                    mode: 'payment',
-                    /*
-                     * Do not rely on the redirect to the successUrl for fulfilling
-                     * purchases, customers may not always reach the success_url after
-                     * a successful payment.
-                     * Instead use one of the strategies described in
-                     * https://stripe.com/docs/payments/checkout/fulfill-orders
-                     */
                     successUrl: 'https://copperdating.com/11843',
                     cancelUrl: 'https://copperdating.com/',
                 })
@@ -821,6 +785,7 @@
             });
         })();
     </script>
+
 
 
 
